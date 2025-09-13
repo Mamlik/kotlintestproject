@@ -22,21 +22,20 @@ from library import Library
 lib = Library()
 
 # Добавляем книги
-lib.add_book("Война и мир", "Л. Толстой", "1111")
-lib.add_book("Анна Каренина", "Л. Толстой", "2222")
+lib.add_book("Война и мир", "Толстой", "1111")
+lib.add_book("Анна Каренина", "Толстой", "2222")
 
-# Поиск
+
 book = lib.find_book("1111")  # поиск по ISBN
 print(book)
 
-# Поиск по автору
-books = lib.books_by_author.get("л. толстой")
+books = lib.books_by_author.get("Толстой")
 print([lib.books[isbn] for isbn in books])
 
 # Удаление
 lib.remove_book("2222")
 ```
-## СТруктура проекта
+## Структура проекта
 ```
 User
   -Guest
@@ -52,3 +51,11 @@ Book
 Borrow Record
   -user id
   -isbn
+Exceptions in library
+```
+## Библиотеки
+dataclasses.dataclass
+datetime
+abc.abstractmetod
+sys
+## 
